@@ -36,13 +36,15 @@ class Fanyi {
     let res = this.result
     let form = this.buildRequest()
     let c = request.post('http://openapi.youdao.com/api', { form },this.callback.bind(this))
-    return this
+    return this.result
   }
 }
-let combindResult = {};
 
-let a = new Fanyi('apple').getResult().getZH()
+
+let a = new Fanyi('apple').getResult()
 console.log(a)
+
+
 // setTimeout(function () {
 //   let finalResult = []
 //   console.log(typeof wordData)
